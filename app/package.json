@@ -16,11 +16,17 @@
     "gatsby-transformer-sharp": "^2.3.7",
     "node-sass": "^4.13.0",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
+    "react": "16.12",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "@storybook/addon-a11y": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^18.0.1",
     "prettier": "^1.19.1"
@@ -36,7 +42,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": ""
+    "test": "",
+    "storybook": "start-storybook"
   },
   "repository": {
     "type": "git",
