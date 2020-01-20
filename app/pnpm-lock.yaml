@@ -3,6 +3,7 @@ dependencies:
   gatsby-image: 2.2.34
   gatsby-plugin-manifest: 2.2.31_gatsby@2.18.7
   gatsby-plugin-offline: 3.0.27_gatsby@2.18.7
+  gatsby-plugin-purgecss: 4.0.1_gatsby@2.18.7
   gatsby-plugin-react-helmet: 3.1.16_gatsby@2.18.7+react-helmet@5.2.1
   gatsby-plugin-sass: 2.1.24_gatsby@2.18.7+node-sass@4.13.0
   gatsby-plugin-sharp: 2.3.5_gatsby@2.18.7
@@ -7499,6 +7500,17 @@ packages:
       gatsby: ^2.0.0
     resolution:
       integrity: sha512-y1KuApvgLSjSbZumLFk32vNRCbiZjhE2nIR4fVbZZ9XevgPxJgBU+Hn6+xM+mYF4/4qxV7ij1f289U+caWFn5g==
+  /gatsby-plugin-purgecss/4.0.1_gatsby@2.18.7:
+    dependencies:
+      fs-extra: 8.1.0
+      gatsby: 2.18.7_2800fc4c27053a0a5fe8726dbdb747b4
+      loader-utils: 1.2.3
+      purgecss: 1.4.2
+    dev: false
+    peerDependencies:
+      gatsby: '>2.0.0-beta'
+    resolution:
+      integrity: sha512-sYh7gm+9dovl+QASrInSXqB2qIMdfGW+Y7+Gum//jYjvktYlFCjGUXD8k/Wiw+CmXaJh8k5avFC23Cot96SS4w==
   /gatsby-plugin-react-helmet/3.1.16_gatsby@2.18.7+react-helmet@5.2.1:
     dependencies:
       '@babel/runtime': 7.7.6
@@ -11135,10 +11147,18 @@ packages:
   /p-limit/2.2.1:
     dependencies:
       p-try: 2.2.0
+    dev: true
     engines:
       node: '>=6'
     resolution:
       integrity: sha512-85Tk+90UCVWvbDavCLKPOLC9vvY8OwEX/RtKF+/1OADJMVlFfEHOiMTPVyxg7mk/dKa+ipdHm0OUkTvCpMTuwg==
+  /p-limit/2.2.2:
+    dependencies:
+      p-try: 2.2.0
+    engines:
+      node: '>=6'
+    resolution:
+      integrity: sha512-WGR+xHecKTr7EbUEhyLSh5Dube9JtdiG78ufaeLxTgpudf/20KqyMioIUZJAezlTIi6evxuoUs9YXc11cU+yzQ==
   /p-locate/2.0.0:
     dependencies:
       p-limit: 1.3.0
@@ -11148,7 +11168,7 @@ packages:
       integrity: sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
   /p-locate/3.0.0:
     dependencies:
-      p-limit: 2.2.1
+      p-limit: 2.2.2
     engines:
       node: '>=6'
     resolution:
@@ -12319,6 +12339,19 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+  /purgecss/1.4.2:
+    dependencies:
+      glob: 7.1.6
+      postcss: 7.0.26
+      postcss-selector-parser: 6.0.2
+      yargs: 14.2.2
+    dev: false
+    engines:
+      node: '>=4.4.0'
+      npm: '>=5.2.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-hkOreFTgiyMHMmC2BxzdIw5DuC6kxAbP/gGOGd3MEsF3+5m69rIvUEPaxrnoUtfODTFKe9hcXjGwC6jcjoyhOw==
   /q/1.5.1:
     engines:
       node: '>=0.6.0'
@@ -15615,6 +15648,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-oVAVsHz6uFrg3XQheFII8ESO2ssAf9luWuAd6Wexsu4F3OtIW0o8IribPXYrD4WC24LWtPrJlGy87y5udK+dxQ==
+  /yargs-parser/15.0.0:
+    dependencies:
+      camelcase: 5.3.1
+      decamelize: 1.2.0
+    dev: false
+    resolution:
+      integrity: sha512-xLTUnCMc4JhxrPEPUYD5IBR1mWCK/aT6+RJ/K29JY2y1vD+FhtgKK0AXRWvI262q3QSffAQuTouFIKUuHX89wQ==
   /yargs-parser/5.0.0:
     dependencies:
       camelcase: 3.0.0
@@ -15653,6 +15693,22 @@ packages:
     dev: false
     resolution:
       integrity: sha512-2eehun/8ALW8TLoIl7MVaRUrg+yCnenu8B4kBlRxj3GJGDKU1Og7sMXPNm1BYyM1DOJmTZ4YeN/Nwxv+8XJsUA==
+  /yargs/14.2.2:
+    dependencies:
+      cliui: 5.0.0
+      decamelize: 1.2.0
+      find-up: 3.0.0
+      get-caller-file: 2.0.5
+      require-directory: 2.1.1
+      require-main-filename: 2.0.0
+      set-blocking: 2.0.0
+      string-width: 3.1.0
+      which-module: 2.0.0
+      y18n: 4.0.0
+      yargs-parser: 15.0.0
+    dev: false
+    resolution:
+      integrity: sha512-/4ld+4VV5RnrynMhPZJ/ZpOCGSCeghMykZ3BhdFBDa9Wy/RH6uEGNWDJog+aUlq+9OM1CFTgtYRW5Is1Po9NOA==
   /yargs/7.1.0:
     dependencies:
       camelcase: 3.0.0
@@ -15728,6 +15784,7 @@ specifiers:
   gatsby-image: ^2.2.34
   gatsby-plugin-manifest: ^2.2.31
   gatsby-plugin-offline: ^3.0.27
+  gatsby-plugin-purgecss: ^4.0.1
   gatsby-plugin-react-helmet: ^3.1.16
   gatsby-plugin-sass: ^2.1.24
   gatsby-plugin-sharp: ^2.3.5
