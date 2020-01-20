@@ -6,6 +6,7 @@ dependencies:
   gatsby-plugin-react-helmet: 3.1.16_gatsby@2.18.7+react-helmet@5.2.1
   gatsby-plugin-sass: 2.1.24_gatsby@2.18.7+node-sass@4.13.0
   gatsby-plugin-sharp: 2.3.5_gatsby@2.18.7
+  gatsby-plugin-tailwindcss: 1.0.3
   gatsby-source-filesystem: 2.1.40_gatsby@2.18.7
   gatsby-transformer-sharp: 2.3.7_7edd0911418c48d1eb6704f863e7aaf9
   node-sass: 4.13.0
@@ -13,6 +14,9 @@ dependencies:
   react: 16.12.0
   react-dom: 16.12.0_react@16.12.0
   react-helmet: 5.2.1_react@16.12.0
+  tailwindcss: 1.1.4
+  tailwindcss-transforms: 2.2.0
+  tailwindcss-transitions: 2.1.0
 devDependencies:
   '@babel/core': 7.7.5
   '@babel/plugin-transform-react-jsx': 7.7.4_@babel+core@7.7.5
@@ -30,6 +34,11 @@ packages:
       '@babel/highlight': 7.5.0
     resolution:
       integrity: sha512-27d4lZoomVyo51VegxI20xZPuSHusqbQag/ztrBC7wegWoQ1nLREPVSKSW8byhTlzTKyNE4ifaTA6lCp7JjpFw==
+  /@babel/code-frame/7.8.3:
+    dependencies:
+      '@babel/highlight': 7.8.3
+    resolution:
+      integrity: sha512-a9gxpmdXtZEInkCSHUJDLHZVBgb1QS0jhss4cPP93EW7s+uC5bikET2twEF3KV+7rDblJcmNvTR7VJejqd2C2g==
   /@babel/core/7.7.4:
     dependencies:
       '@babel/code-frame': 7.5.5
@@ -79,6 +88,15 @@ packages:
       source-map: 0.5.7
     resolution:
       integrity: sha512-m5qo2WgdOJeyYngKImbkyQrnUN1mPceaG5BV+G0E3gWsa4l/jCSryWJdM2x8OuGAOyh+3d5pVYfZWCiNFtynxg==
+  /@babel/generator/7.8.3:
+    dependencies:
+      '@babel/types': 7.8.3
+      jsesc: 2.5.2
+      lodash: 4.17.15
+      source-map: 0.5.7
+    dev: false
+    resolution:
+      integrity: sha512-WjoPk8hRpDRqqzRpvaR8/gDUPkrnOOeuT2m8cNICJtZH6mwaCo3v0OKMI7Y6SM1pBtyijnLtAL0HDi41pf41ug==
   /@babel/helper-annotate-as-pure/7.7.4:
     dependencies:
       '@babel/types': 7.7.4
@@ -262,12 +280,26 @@ packages:
       js-tokens: 4.0.0
     resolution:
       integrity: sha512-7dV4eu9gBxoM0dAnj/BCFDW9LFU0zvTrkq0ugM7pnHEgguOEeOz1so2ZghEdzviYzQEED0r4EAgpsBChKy1TRQ==
+  /@babel/highlight/7.8.3:
+    dependencies:
+      chalk: 2.4.2
+      esutils: 2.0.3
+      js-tokens: 4.0.0
+    resolution:
+      integrity: sha512-PX4y5xQUvy0fnEVHrYOarRPXVWafSjTW9T0Hab8gVIawpl2Sj0ORyrygANq+KjcNlSSTw0YCLSNA8OyZ1I4yEg==
   /@babel/parser/7.7.5:
     engines:
       node: '>=6.0.0'
     hasBin: true
     resolution:
       integrity: sha512-KNlOe9+/nk4i29g0VXgl8PEXIRms5xKLJeuZ6UptN0fHv+jDiriG+y94X6qAgWTR0h3KaoM1wK5G5h7MHFRSig==
+  /@babel/parser/7.8.3:
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-/V72F4Yp/qmHaTALizEm9Gf2eQHV3QyTL3K0cNfijwnMnb1L+LDlAubb/ZnSdGAVzVSWakujHYs1I26x66sMeQ==
   /@babel/plugin-proposal-async-generator-functions/7.7.4_@babel+core@7.7.4:
     dependencies:
       '@babel/core': 7.7.4
@@ -1539,6 +1571,11 @@ packages:
       regenerator-runtime: 0.13.3
     resolution:
       integrity: sha512-BWAJxpNVa0QlE5gZdWjSxXtemZyZ9RmrmVozxt3NUXeZhVIJ5ANyqmMc0JDrivBZyxUuQvFxlvH4OWWOogGfUw==
+  /@babel/runtime/7.8.3:
+    dependencies:
+      regenerator-runtime: 0.13.3
+    resolution:
+      integrity: sha512-fVHx1rzEmwB130VTkLnxR+HmxcTjGzH12LYQcFFoBwakMd3aOMD4OsRN7tGG/UOYE2ektgFrS8uACAoRk1CY0w==
   /@babel/template/7.7.4:
     dependencies:
       '@babel/code-frame': 7.5.5
@@ -1566,6 +1603,14 @@ packages:
       to-fast-properties: 2.0.0
     resolution:
       integrity: sha512-cz5Ji23KCi4T+YIE/BolWosrJuSmoZeN1EFnRtBwF+KKLi8GG/Z2c2hOJJeCXPk4mwk4QFvTmwIodJowXgttRA==
+  /@babel/types/7.8.3:
+    dependencies:
+      esutils: 2.0.3
+      lodash: 4.17.15
+      to-fast-properties: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha512-jBD+G8+LWpMBBWvVcdr4QysjUE4mU/syrhN17o1u3gx0/WzJB1kwiVZAXRtWbsIPOwW8pF/YJV5+nmetPzepXg==
   /@emotion/cache/10.0.19:
     dependencies:
       '@emotion/sheet': 0.9.3
@@ -3318,6 +3363,9 @@ packages:
     optional: true
     peerDependencies:
       '@types/react': '>=16.8.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
     resolution:
       integrity: sha512-v0A231a/lfOo6kxQtmEkdBfTApvC21aJYukA8pkKnoTvVqh3Wmm7/Rwy4GBCHTTHVoLVA5qsBDDvf1XY1nIV2g==
   /autoprefixer/9.7.3:
@@ -3334,6 +3382,21 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-8T5Y1C5Iyj6PgkPSFd0ODvK9DIleuPKUPYniNxybS47g2k2wFgLZ46lGQHlBuGKIAEV8fbCDfKCCRS1tvOgc3Q==
+  /autoprefixer/9.7.4:
+    dependencies:
+      browserslist: 4.8.3
+      caniuse-lite: 1.0.30001021
+      chalk: 2.4.2
+      normalize-range: 0.1.2
+      num2fraction: 1.2.2
+      postcss: 7.0.26
+      postcss-value-parser: 4.0.2
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-g0Ya30YrMBAEZk60lp+qfX5YQllG+S5W3GYCFvyHTvhOki0AEQJLPEcIuGRsqVwLi8FvXPVtwTGhfr38hVpm0g==
   /aws-sign2/0.7.0:
     dev: false
     resolution:
@@ -3503,9 +3566,9 @@ packages:
       integrity: sha512-HNM284amlKSQ6FddI4jLXD+XTqF0cTYOe5uemOIZxHJHnamC+OhFQ57rMF9sgnYhkJQptVl9U1SKVZsV9/GLQQ==
   /babel-plugin-macros/2.8.0:
     dependencies:
-      '@babel/runtime': 7.7.6
+      '@babel/runtime': 7.8.3
       cosmiconfig: 6.0.0
-      resolve: 1.13.1
+      resolve: 1.14.2
     resolution:
       integrity: sha512-SEP5kJpfGYqYKpBrj5XU3ahw5p5GOHJ0U5ssOSQ/WBVdwkD2Dzlce95exQTs3jOVWPPKLBN2rlEWkCK7dSmLvg==
   /babel-plugin-minify-builtins/0.5.0:
@@ -3609,6 +3672,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-/WU28rzhODb/o6VFjEkDpZe7O/U=
+  /babel-plugin-tailwind-components/0.5.10:
+    dependencies:
+      '@babel/generator': 7.8.3
+      '@babel/parser': 7.8.3
+      babel-plugin-macros: 2.8.0
+    dev: false
+    resolution:
+      integrity: sha512-AVZuc+ts2FtTUKJgHb0GyIA89xYeczqTDAM9qjxtEVKgz4gWmqs7HtsC4DPXg0telTZWobwLK1Jw1Cimik1CgA==
   /babel-plugin-transform-inline-consecutive-adds/0.4.3:
     dev: true
     resolution:
@@ -4091,6 +4162,15 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-+M4oeaTplPm/f1pXDw84YohEv7B1i/2Aisei8s4s6k3QsoSHa7i5sz8u/cGQkkatCPxMASKxPualR4wwYgVboA==
+  /browserslist/4.8.3:
+    dependencies:
+      caniuse-lite: 1.0.30001021
+      electron-to-chromium: 1.3.337
+      node-releases: 1.1.46
+    dev: false
+    hasBin: true
+    resolution:
+      integrity: sha512-iU43cMMknxG1ClEZ2MDKeonKE1CCrFVkQK2AqO2YWFmvIrx4JWrvQ4w4hQez6EpVI8rHTtqh/ruHHDHSOKxvUg==
   /buffer-alloc-unsafe/1.1.0:
     dev: false
     resolution:
@@ -4274,6 +4354,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-yjw2iKTpzzpM2nd9xNy8cTJJz3M=
+  /camelcase-css/2.0.1:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==
   /camelcase-keys/2.1.0:
     dependencies:
       camelcase: 2.1.1
@@ -4316,6 +4402,10 @@ packages:
   /caniuse-lite/1.0.30001015:
     resolution:
       integrity: sha512-/xL2AbW/XWHNu1gnIrO8UitBGoFthcsDgU9VLK1/dpsoxbaD5LscHozKze05R6WLsBvLhqv78dAPozMFQBYLbQ==
+  /caniuse-lite/1.0.30001021:
+    dev: false
+    resolution:
+      integrity: sha512-wuMhT7/hwkgd8gldgp2jcrUjOU9RXJ4XxGumQeOsUr91l3WwmM68Cpa/ymCnWEDqakwFXhuDQbaKNHXBPgeE9g==
   /case-sensitive-paths-webpack-plugin/2.2.0:
     dev: true
     engines:
@@ -5201,7 +5291,6 @@ packages:
     resolution:
       integrity: sha512-MsCAG1z9lPdoO/IUMLSBWBSVxVtJ1395VGIQ+Fc2gNdkQ1hNDnQdw3YhA71WJCBW1vdwA0cAnk/DnW6bqoEUYg==
   /cssesc/3.0.0:
-    dev: true
     engines:
       node: '>=4'
     hasBin: true
@@ -5866,6 +5955,10 @@ packages:
   /electron-to-chromium/1.3.322:
     resolution:
       integrity: sha512-Tc8JQEfGQ1MzfSzI/bTlSr7btJv/FFO7Yh6tanqVmIWOuNCu6/D1MilIEgLtmWqIrsv+o4IjpLAhgMBr/ncNAA==
+  /electron-to-chromium/1.3.337:
+    dev: false
+    resolution:
+      integrity: sha512-uJ+wLjslYQ/2rAusDg+6FlK8DLhHWTLCe7gkofBehTifW7KCkPVTn5rhKSCncWYNq34Iy/o4OfswuEkAO2RBaw==
   /element-resize-detector/1.1.15:
     dependencies:
       batch-processor: 1.0.0
@@ -7463,6 +7556,12 @@ packages:
       gatsby: '>2.0.15'
     resolution:
       integrity: sha512-2POz9S1n3Xh2+5nhkJ5Zgp+dZxtgNd/00Q3cjnNGajSciRHeA+wvYilWxiDtudu1gLt5dIRVizj2zRuXgcQYWA==
+  /gatsby-plugin-tailwindcss/1.0.3:
+    dependencies:
+      babel-plugin-tailwind-components: 0.5.10
+    dev: false
+    resolution:
+      integrity: sha512-aWwZZR4eboMl0T3c4+XEE/MbOL4w6JPM8QBMl5dSXmBwEVofzXvOFP6P+dJAEnSy9fHi1WKw/fTojDN6xgAG2A==
   /gatsby-react-router-scroll/2.1.17_ce2119e6d6a992844cc7b9c9bf4e452b:
     dependencies:
       '@babel/runtime': 7.7.6
@@ -10538,6 +10637,12 @@ packages:
       semver: 6.3.0
     resolution:
       integrity: sha512-OQ/ESmUqGawI2PRX+XIRao44qWYBBfN54ImQYdWVTQqUckuejOg76ysSqDBK8NG3zwySRVnX36JwDQ6x+9GxzA==
+  /node-releases/1.1.46:
+    dependencies:
+      semver: 6.3.0
+    dev: false
+    resolution:
+      integrity: sha512-YOjdx+Uoh9FbRO7yVYbnbt1puRWPQMemR3SutLeyv2XfxKs1ihpe0OLAUwBPEP2ImNH/PZC7SEiC6j32dwRZ7g==
   /node-sass/4.13.0:
     dependencies:
       async-foreach: 0.1.3
@@ -10640,6 +10745,10 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
+  /normalize.css/8.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
   /npm-conf/1.1.3:
     dependencies:
       config-chain: 1.1.12
@@ -11212,7 +11321,7 @@ packages:
       integrity: sha1-vjX1Qlvh9/bHRxhPmKeIy5lHfuA=
   /parse-json/5.0.0:
     dependencies:
-      '@babel/code-frame': 7.5.5
+      '@babel/code-frame': 7.8.3
       error-ex: 1.3.2
       json-parse-better-errors: 1.0.2
       lines-and-columns: 1.1.6
@@ -11593,6 +11702,22 @@ packages:
     dev: true
     resolution:
       integrity: sha512-jr1LHxQvStNNAHlgco6PzY308zvLklh7SJVYuWUwyUQncofaAlD2l+P/gxKHOdqWKe7xJSkVLFF/2Tp+JqMSZA==
+  /postcss-functions/3.0.0:
+    dependencies:
+      glob: 7.1.6
+      object-assign: 4.1.1
+      postcss: 6.0.23
+      postcss-value-parser: 3.3.1
+    dev: false
+    resolution:
+      integrity: sha1-DpTQFERwCkgd4g3k1V+yZAVkJQ4=
+  /postcss-js/2.0.3:
+    dependencies:
+      camelcase-css: 2.0.1
+      postcss: 7.0.26
+    dev: false
+    resolution:
+      integrity: sha512-zS59pAk3deu6dVHyrGqmC3oDXBdNdajk4k1RyxeVXCrcEDBUBHoIhE4QTsmhxgzXxsaqFDAkUZfmMa5f/N/79w==
   /postcss-load-config/2.1.0:
     dependencies:
       cosmiconfig: 5.2.1
@@ -11753,6 +11878,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-1//E5jCBrZ9DmRX+zCtmQtRSV6PV42Ix7Bzj9GbwJceduuf7IqP8MgeTXuRDHOWj2m0VzZD5+roFWDuU8RQjcg==
+  /postcss-nested/4.2.1:
+    dependencies:
+      postcss: 7.0.26
+      postcss-selector-parser: 6.0.2
+    dev: false
+    resolution:
+      integrity: sha512-AMayXX8tS0HCp4O4lolp4ygj9wBn32DJWXvG6gCv+ZvJrEa00GUxJcJEEzMh87BIe6FrWdYkpR2cuyqHKrxmXw==
   /postcss-normalize-charset/4.0.1:
     dependencies:
       postcss: 7.0.24
@@ -11900,7 +12032,6 @@ packages:
       cssesc: 3.0.0
       indexes-of: 1.0.1
       uniq: 1.0.1
-    dev: true
     engines:
       node: '>=4'
     resolution:
@@ -11952,6 +12083,16 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-Xl0XvdNWg+CblAXzNvbSOUvgJXwSjmbAKORqyw9V2AlHrm1js2gFw9y3jibBAhpKZi8b5JzJCVh/FyzPsTtgTA==
+  /postcss/7.0.26:
+    dependencies:
+      chalk: 2.4.2
+      source-map: 0.6.1
+      supports-color: 6.1.0
+    dev: false
+    engines:
+      node: '>=6.0.0'
+    resolution:
+      integrity: sha512-IY4oRjpXWYshuTDFxMVkJDtWIk2LhsTlu8bZnbEJA4+bYT16Lvpo8Qv6EvDumhYRgzjZl489pmsY3qVgJQ08nA==
   /potrace/2.1.2:
     dependencies:
       jimp: 0.6.8
@@ -12017,7 +12158,6 @@ packages:
     resolution:
       integrity: sha1-X0+HyPkeWuPzuoerTPXgOxoX8aM=
   /pretty-hrtime/1.0.3:
-    dev: true
     engines:
       node: '>= 0.8'
     resolution:
@@ -12763,6 +12903,13 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha1-z5Fqsf1fHxbfsggi3W7H9zDCr94=
+  /reduce-css-calc/2.1.7:
+    dependencies:
+      css-unit-converter: 1.1.1
+      postcss-value-parser: 3.3.1
+    dev: false
+    resolution:
+      integrity: sha512-fDnlZ+AybAS3C7Q9xDq5y8A2z+lT63zLbynew/lur/IR24OQF5x98tfNwf79mzEdfywZ0a2wpM860FhFfMxZlA==
   /redux-thunk/2.3.0:
     dev: false
     resolution:
@@ -13020,6 +13167,11 @@ packages:
       path-parse: 1.0.6
     resolution:
       integrity: sha512-CxqObCX8K8YtAhOBRg+lrcdn+LK+WYOS8tSjqSFbjtrI5PnS63QPhZl4+yKfrU9tdsbMu9Anr/amegT87M9Z6w==
+  /resolve/1.14.2:
+    dependencies:
+      path-parse: 1.0.6
+    resolution:
+      integrity: sha512-EjlOBLBO1kxsUxsKjLt7TAECyKW6fOh1VRkykQkKGzcBbjjPIxBqGh0jf7GJ3k/f5mxMqW3htMD3WdTUVtW8HQ==
   /responselike/1.0.2:
     dependencies:
       lowercase-keys: 1.0.0
@@ -14218,6 +14370,40 @@ packages:
       node: '>=6.0.0'
     resolution:
       integrity: sha512-wmEc8m4fjnob4gt5riFRtTu/6+4rSe12TpAELNSqHMfF3IqnA+CH37USM6/YR3qRZv7e56kAEAtd6nKZaxe0Ug==
+  /tailwindcss-transforms/2.2.0:
+    dependencies:
+      lodash: 4.17.15
+    dev: false
+    resolution:
+      integrity: sha512-0HPzE1QgGi94lNOgsIKA0AWaQern+JR0XNJkRmpyjFybpSLtQ5HkupF/caAmUW+pTt4cguDzd5gw09uw1oaG3A==
+  /tailwindcss-transitions/2.1.0:
+    dependencies:
+      lodash: 4.17.15
+    dev: false
+    resolution:
+      integrity: sha512-WafCC+ujZk2rUECdBoFeF8lKTmrrpNudrHxSHNikYfaYyVR7BRRqpB2n49/wxzg8/YWy8OK42MvQnFuJBb2yxw==
+  /tailwindcss/1.1.4:
+    dependencies:
+      autoprefixer: 9.7.4
+      bytes: 3.1.0
+      chalk: 2.4.2
+      fs-extra: 8.1.0
+      lodash: 4.17.15
+      node-emoji: 1.10.0
+      normalize.css: 8.0.1
+      postcss: 7.0.26
+      postcss-functions: 3.0.0
+      postcss-js: 2.0.3
+      postcss-nested: 4.2.1
+      postcss-selector-parser: 6.0.2
+      pretty-hrtime: 1.0.3
+      reduce-css-calc: 2.1.7
+    dev: false
+    engines:
+      node: '>=8.9.0'
+    hasBin: true
+    resolution:
+      integrity: sha512-p4AxVa4CKpX7IbNxImwNMGG9MHuLgratOaOE/iGriNd4AsRQRM2xMisoQ3KQHqShunrWuObga7rI7xbNsVoWGA==
   /tapable/1.1.3:
     engines:
       node: '>=6'
@@ -15410,7 +15596,7 @@ packages:
       integrity: sha512-p9QIzcFSNm4mCw/m5NdyMfN4RE4aFZJWRRb01ERVNGCym8VNbKtw3OYZXnvUIkim6U/EjqE/2yIh9F/msShH9A==
   /yaml/1.7.2:
     dependencies:
-      '@babel/runtime': 7.7.6
+      '@babel/runtime': 7.8.3
     engines:
       node: '>= 6'
     resolution:
@@ -15545,6 +15731,7 @@ specifiers:
   gatsby-plugin-react-helmet: ^3.1.16
   gatsby-plugin-sass: ^2.1.24
   gatsby-plugin-sharp: ^2.3.5
+  gatsby-plugin-tailwindcss: ^1.0.3
   gatsby-source-filesystem: ^2.1.40
   gatsby-transformer-sharp: ^2.3.7
   node-sass: ^4.13.0
@@ -15553,3 +15740,6 @@ specifiers:
   react: '16.12'
   react-dom: ^16.12.0
   react-helmet: ^5.2.1
+  tailwindcss: ^1.1.4
+  tailwindcss-transforms: ^2.2.0
+  tailwindcss-transitions: ^2.1.0
