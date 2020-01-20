@@ -1,3 +1,6 @@
+const tailwindTransforms = require("tailwindcss-transforms");
+const tailwindTransitions = require("tailwindcss-transitions");
+
 /* Helper Functions */
 const pxToRem = (px, base = 16) => { return `${px / base}rem`; };
 const buildUtilityOptions = (start = 1, step = 4, limit = 64) => {
@@ -377,6 +380,10 @@ module.exports = {
     textColor: ["hover"],
     transform: ["responsive"],
     translate: ["responsive"],
+    transitionProperty: ["responsive"],
+    transitionDuration: ["responsive"],
+    transitionTimingFunction: ["responsive"],
+    transitionDelay: ["responsive"],
     visibility: ["responsive"],
     whitespace: [],
     width: ["responsive"],
@@ -395,7 +402,7 @@ module.exports = {
   */
 
   plugins: [
-    require("tailwindcss-transforms")({
+    tailwindTransforms({ // https://github.com/benface/tailwindcss-transforms
       "3d": false,
       backfaceVisibility: false,
       perspective: false,
@@ -406,6 +413,6 @@ module.exports = {
       transformOrigin: false,
       transformStyle: false,
     }),
-    require("tailwindcss-transitions")(),
+    tailwindTransitions(), // https://github.com/benface/tailwindcss-transitions
   ],
 };
