@@ -21,3 +21,17 @@
     cd ./portfolio
     gatsby develop
     ```
+1.  **Start Storybook server.**
+
+    ```
+    npm run storybook
+    ```
+
+### Additional information
+
+
+- Statically generated site using [GatsbyJS](https://www.gatsbyjs.org/docs/)
+  - Based on Based on gatsby-starter-default
+- [Tailwind CSS](https://tailwindcss.com/) Framework & [Sass](https://sass-lang.com/documentation)
+- [StorybookJS](https://storybook.js.org/docs/basics/introduction/) for easy UI testing
+- Developed with a11y in mind
