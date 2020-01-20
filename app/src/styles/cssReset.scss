@@ -34,7 +34,7 @@ body {
 /* Replace list-style with transparent img to keep accessibility, remove default padding */
 ul,
 ol {
-  list-style-image: url("./images/icons/transparent-dot.svg");
+  list-style-image: url("../images/icons/transparent-dot.svg");
   padding: 0;
 }
 
