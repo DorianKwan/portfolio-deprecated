@@ -5,11 +5,9 @@ import React from "react";
 const Header = ({ siteTitle }) => {
   return (
     <header>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/">
-          {siteTitle}
-        </Link>
-      </h1>
+      <Link to="/">
+        {siteTitle}
+      </Link>
     </header>
   );
 };
