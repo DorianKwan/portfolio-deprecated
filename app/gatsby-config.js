@@ -1,3 +1,5 @@
+const tailwindcss = require("tailwindcss");
+
 module.exports = {
   siteMetadata: {
     title: "BSK Portfolio",
@@ -25,6 +27,12 @@ module.exports = {
         icon: "src/images/icons/brand-icon.svg", // This path is relative to the root of the site.
       },
     },
-    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-sass",
+      options: {
+        postCssPlugins: [tailwindcss("./tailwind.config.js")],
+      },
+    },
+    "gatsby-plugin-tailwindcss",
   ],
 };

@@ -12,5 +12,8 @@ module.exports = {
         "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "quotes": [2, "double", { "avoidEscape": true }],
         "arrow-body-style": ["error", "always"]
-    } 
+    },
+    "globals": {
+        "tw": true
+    },
 };
