@@ -30,6 +30,7 @@ const colors = {
   white: "#fff",
   // Grey Shades
   grey: "#828282",
+  "light-grey": "#F2F2F2",
   mink: "#88807B",
   harbor: "#C7C6C1",
   ash: "#544C4A",
