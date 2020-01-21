@@ -25,5 +25,19 @@ module.exports = async ({ config, mode }) => {
     include: path.resolve(__dirname, "../"),
   });
 
+  config.module.rules.push({
+    test: /\.(js|jsx)$/,
+    use: [
+      {
+        loader: "babel-loader",
+        options: {
+          presets: ["@babel/preset-react"],
+          plugins: ["@babel/plugin-proposal-class-properties"]
+        },
+      },
+    ],
+    include: path.resolve(__dirname, "../"),
+  })
+
   return config;
 };

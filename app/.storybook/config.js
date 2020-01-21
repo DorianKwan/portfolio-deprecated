@@ -13,3 +13,8 @@ addDecorator(withKnobs);
 
 // automatically import all files ending in *.stories.js
 configure(require.context("../src/components/stories", true, /\.stories\.js$/), module);
+
+global.__PATH_PREFIX__ = ""
+window.___navigate = pathname => {
+  action("NavigateTo:")(pathname)
+}
