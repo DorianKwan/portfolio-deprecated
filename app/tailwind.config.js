@@ -28,6 +28,7 @@ const colors = {
   transparent: "transparent",
   black: "#000",
   white: "#fff",
+  inherit: "inherit",
   // Grey Shades
   grey: "#828282",
   "light-grey": "#F2F2F2",
