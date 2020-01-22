@@ -1,5 +1,6 @@
 dependencies:
   '@babel/plugin-proposal-class-properties': 7.8.3_@babel+core@7.7.5
+  '@n8tb1t/use-scroll-position': 1.0.43_react@16.12.0
   gatsby: 2.18.7_2800fc4c27053a0a5fe8726dbdb747b4
   gatsby-image: 2.2.34
   gatsby-plugin-manifest: 2.2.31_gatsby@2.18.7
@@ -2854,6 +2855,14 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-bPHp6Ji8b41szTOcaP63VlnbbO5Ny6dwAATtY6JTjh5N2OLrb5Qk/Th5cRkRQhkWCt+EJsYrNB0MiL+Gpn6e3g==
+  /@n8tb1t/use-scroll-position/1.0.43_react@16.12.0:
+    dependencies:
+      react: 16.12.0
+    dev: false
+    peerDependencies:
+      react: ^16.8.6
+    resolution:
+      integrity: sha512-9CFB+3/ZRP0BGHCS+01ulq3syHamhcQiu3iVBSPJZV+578ySSOt9tWIVDiSaIQfz3a1QdKUbhYR+4Uplda3cwA==
   /@nodelib/fs.scandir/2.1.3:
     dependencies:
       '@nodelib/fs.stat': 2.0.3
@@ -17187,6 +17196,7 @@ specifiers:
   '@babel/plugin-proposal-class-properties': ^7.8.3
   '@babel/plugin-transform-react-jsx': ^7.7.4
   '@babel/preset-react': ^7.7.4
+  '@n8tb1t/use-scroll-position': ^1.0.43
   '@storybook/addon-a11y': ^5.2.8
   '@storybook/addon-knobs': ^5.3.7
   '@storybook/react': ^5.2.8
