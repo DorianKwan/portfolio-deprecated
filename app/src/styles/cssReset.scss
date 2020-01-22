@@ -52,6 +52,16 @@ select {
   font: inherit;
 }
 
+/* Set text-decoration for links to appear on focus and hover */
+a {
+  text-decoration: none;
+
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
