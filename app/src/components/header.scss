@@ -1,0 +1,25 @@
+.navbar {
+  nav {
+    ul li a {
+      position: relative;
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        transition: width 0.4s ease-in-out;
+        background-color: #70deb9;
+        z-index: -1;
+      }
+    }
+  }
+}
