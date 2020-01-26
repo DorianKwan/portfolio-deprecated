@@ -7,7 +7,7 @@
 
 /* Set max-width of site to 1600px */
 body {
-  @apply max-w-1600;
+  @apply max-w-1600 mx-auto;
 }
 
 /* Set global padding (mobile 1rem, tablet+ to 3rem) */
