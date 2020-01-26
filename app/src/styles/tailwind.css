@@ -14,7 +14,7 @@ body {
 header,
 main,
 footer {
-  @apply px-12;
+  @apply px-16;
 }
 
 @media only screen and (min-width: 768px) {
