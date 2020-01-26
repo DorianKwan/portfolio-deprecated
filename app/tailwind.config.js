@@ -87,10 +87,7 @@ const fontWeight = {
 };
 
 const leading = {
-  none: 1,
-  tight: 1.25,
-  normal: 1.5,
-  loose: 2,
+  ...fontSize,
 };
 
 const letterSpacing = {
@@ -120,6 +117,11 @@ const borderColor = {
 
 const borderRadius = {
   full: "9999px",
+};
+
+const borderStyle = {
+  none: "none",
+  solid: "solid",
 };
 
 const width = {
@@ -173,7 +175,7 @@ const maxHeight = {
 
 const padding = { ...spacing };
 
-const negativeMargin = { ...(Object.keys(spacing).forEach((key) => { spacing[key] = `-${spacing[key]}`; })) };
+const negativeMargin = { ...(Object.keys(spacing).forEach((key) => { spacing[`-${key}`] = `-${spacing[key]}`; })) };
 
 const margin = { auto: "auto", ...spacing, ...negativeMargin };
 
@@ -263,6 +265,7 @@ module.exports = {
     backgroundColor,
     borderColor,
     borderRadius,
+    borderStyle,
     borderWidth,
     boxShadow,
     colors,
@@ -310,7 +313,6 @@ module.exports = {
     apperance: false,
     backgroundPosition: false,
     backgroundSize: false,
-    borderStyle: false,
     container: false,
     cursor: false,
     float: false,
