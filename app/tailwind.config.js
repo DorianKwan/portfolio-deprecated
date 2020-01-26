@@ -189,6 +189,7 @@ const boxShadow = {
 const inset = {
   auto: "auto",
   0: "0",
+  "-1": pxToRem(-1),
   ...spacing,
 };
 
