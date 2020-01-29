@@ -36,3 +36,7 @@ div,
 a {
   @apply font-sans;
 }
+
+.stretch-bg {
+  @apply w-stretch relative px-48 -left-48;
+}
