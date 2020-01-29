@@ -18,16 +18,12 @@ const modalStyles = {
   },
 };
 
-const getRandomNumber = (min = 1, max = 9999) => {
-  return Math.random() * (max - min) + min;
-};
-
 const buildNavlinks = (navigationData, linkWrapperClasses, linkClasses) => {
   const navLinks = [];
 
   navigationData.forEach((link) => {
     const { title, href } = link;
-    const linkKey = `${title}-${getRandomNumber()}`;
+    const linkKey = `nav-list-item-${title}`;
     navLinks.push(
       <li key={linkKey} className={linkWrapperClasses}>
         <Link to={href} className={linkClasses}>{title}</Link>
