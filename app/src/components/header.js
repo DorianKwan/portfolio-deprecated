@@ -29,8 +29,8 @@ const buildNavlinks = (navigationData, linkWrapperClasses, linkClasses) => {
     const { title, href } = link;
     const linkKey = `${title}-${getRandomNumber()}`;
     navLinks.push(
-      <li className={linkWrapperClasses}>
-        <Link to={href} key={linkKey} className={linkClasses}>{title}</Link>
+      <li key={linkKey} className={linkWrapperClasses}>
+        <Link to={href} className={linkClasses}>{title}</Link>
       </li>
     );
   });
