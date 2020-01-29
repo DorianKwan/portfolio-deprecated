@@ -8,30 +8,30 @@ export default { title: "Header" };
 
 const navigationData = [
   {
-    href: "/about",
     title: "About",
+    href: "/about",
   },
   {
-    href: "/projects",
     title: "Projects",
+    href: "/projects",
   },
   {
-    href: "/work",
     title: "Work",
+    href: "/work",
   },
   {
-    href: "/contact",
     title: "Contact",
+    href: "/contact",
   },
 ];
 
 export const defaultOptions = () => {
   return (
-    <div className="">
+    <>
       <Header siteTitle="BSK" navigationData={navigationData} />
-      <div className="h-800 w-full -z-1">
+      <div className="h-900 w-full -z-1">
         <img src={bgSrc} alt="text-bg" className="h-full w-full" />
       </div>
-    </div>
+    </>
   );
 };
