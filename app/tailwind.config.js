@@ -149,6 +149,8 @@ const width = {
 const height = {
   full: "100%",
   screen: "100vh",
+  "1/4": "25%",
+  "3/4": "75%",
   ...sizing,
 };
 
