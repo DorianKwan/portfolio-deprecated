@@ -381,7 +381,7 @@ module.exports = {
     opacity: [],
     outline: ["focus"],
     overflow: ["responsive"],
-    padding: ["responsive"],
+    padding: ["responsive", "first"],
     position: ["responsive"],
     scale: ["responsive", "hover"],
     stroke: [],
