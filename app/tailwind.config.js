@@ -138,7 +138,7 @@ const width = {
   "1/6": "16.66667%",
   "5/6": "83.33333%",
   full: "100%",
-  fill: "calc(100% + 6rem)",
+  stretch: "calc(100% + 6rem)",
   screen: "100vw",
   1200: pxToRem(1200),
   1400: pxToRem(1400),
@@ -195,6 +195,7 @@ const inset = {
   auto: "auto",
   0: "0",
   "-1": pxToRem(-1),
+  "-48": pxToRem(-48),
   ...spacing,
 };
 
