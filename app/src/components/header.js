@@ -62,7 +62,7 @@ const MobileNav = ({ siteLogo, navigationData, isScrolled }) => {
   };
 
   const hamburgerClasses = `hamburger md:hidden w-40 p-0 cursor-pointer bg-transparent border-none ${modalIsOpen ? "active" : ""}`;
-  const hamburgerLineClasses = `w-full h-4 block transition-500 bg-${isScrolled || modalIsOpen ? "ash" : "white"}`;
+  const hamburgerLineClasses = `w-full h-4 block transition-500 bg-${isScrolled || modalIsOpen ? "charcoal" : "white"}`;
   const navLinkClasses = "text-18 text-inherit uppercase font-medium transition-500 pb-4";
   const linkWrapperClasses = "py-12";
   const links = buildNavlinks(navigationData, linkWrapperClasses, navLinkClasses);
@@ -88,7 +88,7 @@ const MobileNav = ({ siteLogo, navigationData, isScrolled }) => {
         closeTimeoutMS={500}
         style={modalStyles}
       >
-        <div className="w-full flex justify-between text-ash">
+        <div className="w-full flex justify-between text-charcoal">
           {siteLogo}
           <button
             type="button"
@@ -97,13 +97,13 @@ const MobileNav = ({ siteLogo, navigationData, isScrolled }) => {
           >
             <span className="sr-only">Close mobile nav</span>
             <div className="w-full h-30 flex flex-col justify-between">
-              <span className="w-full h-4 block bg-ash rotate-45" />
-              <span className="w-full h-4 block bg-ash -rotate-45" />
+              <span className="w-full h-4 block bg-charcoal rotate-45" />
+              <span className="w-full h-4 block bg-charcoal -rotate-45" />
             </div>
           </button>
         </div>
         <nav className="my-16">
-          <ul className="flex flex-col text-ash">
+          <ul className="flex flex-col text-charcoal">
             {links}
           </ul>
         </nav>
@@ -115,7 +115,7 @@ const MobileNav = ({ siteLogo, navigationData, isScrolled }) => {
 const Header = ({ siteTitle, navigationData }) => {
   const [headerStyle, setHeaderStyle] = useState({
     transition: "all 500ms linear",
-    color: "white",
+    color: "#f7f7f7",
   });
 
   const [isScrolled, setScrolled] = useState(false);
@@ -127,9 +127,9 @@ const Header = ({ siteTitle, navigationData }) => {
 
       const shouldBeStyle = {
         transition: "all 500ms linear",
-        color: isTransparent ? "white" : "#544C4A", // ash
-        "background-color": isTransparent ? "transparent" : "white",
-        "box-shadow": isTransparent ? "none" : "0px 0px 15px -5px rgba(0,0,0,0.25)",
+        color: isTransparent ? "#f7f7f7" : "#544C4A", // off-white / charcoal
+        backgroundColor: isTransparent ? "transparent" : "white",
+        boxShadow: isTransparent ? "none" : "0px 0px 15px -5px rgba(0,0,0,0.25)",
       };
 
       if (JSON.stringify(shouldBeStyle) === JSON.stringify(headerStyle)) return;
