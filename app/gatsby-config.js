@@ -2,8 +2,8 @@ const tailwindcss = require("tailwindcss");
 
 module.exports = {
   siteMetadata: {
-    title: "BSK Portfolio",
-    description: "Basic SPA Portfolio",
+    title: "BSK",
+    description: "Portfolio",
     author: "Bryce Sayers-Kwan",
   },
   plugins: [
@@ -24,7 +24,7 @@ module.exports = {
         short_name: "BSK Portfolio",
         start_url: "/",
         display: "minimal-ui",
-        icon: "src/images/icons/brand-icon.svg",
+        icon: "src/images/icons/brand-logo.svg",
       },
     },
     {
