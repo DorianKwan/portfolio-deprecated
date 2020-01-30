@@ -10,7 +10,7 @@ dependencies:
   gatsby-plugin-sass: 2.1.24_gatsby@2.18.7+node-sass@4.13.0
   gatsby-plugin-sharp: 2.3.5_gatsby@2.18.7
   gatsby-plugin-tailwindcss: 1.0.3
-  gatsby-source-filesystem: 2.1.40_gatsby@2.18.7
+  gatsby-source-filesystem: 2.1.47_gatsby@2.18.7
   gatsby-transformer-sharp: 2.3.7_7edd0911418c48d1eb6704f863e7aaf9
   node-sass: 4.13.0
   prop-types: 15.7.2
@@ -2335,6 +2335,12 @@ packages:
       regenerator-runtime: 0.13.3
     resolution:
       integrity: sha512-fVHx1rzEmwB130VTkLnxR+HmxcTjGzH12LYQcFFoBwakMd3aOMD4OsRN7tGG/UOYE2ektgFrS8uACAoRk1CY0w==
+  /@babel/runtime/7.8.4:
+    dependencies:
+      regenerator-runtime: 0.13.3
+    dev: false
+    resolution:
+      integrity: sha512-neAp3zt80trRVBI1x0azq6c57aNBqYZH8KhMm3TaB7wEI5Q4A2SHfBHE8w9gOhI/lrqxtEbXZgQIrHP+wvSGwQ==
   /@babel/template/7.7.4:
     dependencies:
       '@babel/code-frame': 7.5.5
@@ -4051,7 +4057,7 @@ packages:
   /anymatch/3.1.1:
     dependencies:
       normalize-path: 3.0.0
-      picomatch: 2.1.1
+      picomatch: 2.2.1
     dev: false
     engines:
       node: '>= 8'
@@ -4810,7 +4816,7 @@ packages:
     dependencies:
       better-queue-memory: 1.0.4
       node-eta: 0.9.0
-      uuid: 3.3.3
+      uuid: 3.4.0
     dev: false
     resolution:
       integrity: sha512-e3gwNZgDCnNWl0An0Tz6sUjKDV9m6aB+K9Xg//vYeo8+KiH8pWhLFxkawcXhm6FpM//GfD9IQv/kmvWCAVVpKA==
@@ -7917,12 +7923,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-uzk64HRpUZyTGZtVuvrjP0FYxzQrBf4rojot6J65YMEbwBLB0CWm0CLojVpwpmFmxcE/lkvYICgfcGozbBq6rw==
-  /file-type/12.4.0:
+  /file-type/12.4.2:
     dev: false
     engines:
       node: '>=8'
     resolution:
-      integrity: sha512-WTvyKq8yjtNmUtVAD8LGcTkvtCdJglM6ks2HTqEClm6+65XTqM6MoZYA1Vtra50DLRWLiM38fEs1y56f5VhnUA==
+      integrity: sha512-UssQP5ZgIOKelfsaB5CuGAL+Y+q7EmONuiwF3N5HAH0t27rvrttgi6Ra9k/+DVaY9UF6+ybxu5pOXLUdA8N7Vg==
   /file-type/3.9.0:
     dev: false
     engines:
@@ -8383,6 +8389,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-38W+lWb7pPiv7AjGxDx/MSWwmgnPtOejNHSxRcMXhrXNSWpiWCDoNTBM6UCXnbky82kUx4DPX5gXgw7u2s+/rA==
+  /gatsby-core-utils/1.0.27:
+    dependencies:
+      ci-info: 2.0.0
+      node-object-hash: 2.0.0
+    dev: false
+    resolution:
+      integrity: sha512-w75Sjby/XhYQexeDTAQoBI385BXMt79B+hT55JwQmtz1VJ4/gQMUENG2J5ABzPsN7rD1TueNcR9BpU5Ns7sgdw==
   /gatsby-graphiql-explorer/0.2.29:
     dependencies:
       '@babel/runtime': 7.7.6
@@ -8573,16 +8586,16 @@ packages:
       react-dom: ^0.14.0 || ^15.0.0 || ^16.0.0
     resolution:
       integrity: sha512-5enc2qvcZwD4Omdr78gUfqH/4uOPW7UJE6d3EQAbGyaO6cD0dpjAGsLHHXkcjSTRIult2w6cvru7fI5suJnZtg==
-  /gatsby-source-filesystem/2.1.40_gatsby@2.18.7:
+  /gatsby-source-filesystem/2.1.47_gatsby@2.18.7:
     dependencies:
-      '@babel/runtime': 7.7.6
+      '@babel/runtime': 7.8.4
       better-queue: 3.8.10
       bluebird: 3.7.2
       chokidar: 3.3.0
-      file-type: 12.4.0
+      file-type: 12.4.2
       fs-extra: 8.1.0
       gatsby: 2.18.7_2800fc4c27053a0a5fe8726dbdb747b4
-      gatsby-core-utils: 1.0.22
+      gatsby-core-utils: 1.0.27
       got: 7.1.0
       md5-file: 3.2.3
       mime: 2.4.4
@@ -8590,14 +8603,14 @@ packages:
       progress: 2.0.3
       read-chunk: 3.2.0
       valid-url: 1.0.9
-      xstate: 4.7.2
+      xstate: 4.7.7
     dev: false
     engines:
       node: '>=8.0.0'
     peerDependencies:
       gatsby: ^2.2.0
     resolution:
-      integrity: sha512-lCiuNbrb7yl97JjViP+O/TM0rtgDAFJsiebTsY3aUXOzlzIcfVDS7j7ag/H+aGAk9vs1BgGoa+8XSWjP3i90Og==
+      integrity: sha512-25WktQN4XUpknVkwwvIio80ZEg3tEQISOsU6N81fI0tpxLPss9iShplGQvuA3K4dsewV+CTHQs3t3vyMGSaNYg==
   /gatsby-telemetry/1.1.42:
     dependencies:
       '@babel/code-frame': 7.5.5
@@ -12634,12 +12647,6 @@ packages:
     dev: false
     resolution:
       integrity: sha1-GN4vl+S/epVRrXURlCtUlverpmA=
-  /picomatch/2.1.1:
-    dev: false
-    engines:
-      node: '>=8.6'
-    resolution:
-      integrity: sha512-OYMyqkKzK7blWO/+XZYP6w8hH0LDvkBvdvKukti+7kqYFCiEAk+gI3DWnryapc0Dau05ugGTy0foQ6mqn4AHYA==
   /picomatch/2.2.1:
     engines:
       node: '>=8.6'
@@ -14151,7 +14158,7 @@ packages:
       integrity: sha512-1JU/8q+VgFZyxwrJ+SVIOsh+KywWGpds3NTqikiKpDMZWScmAYyKIgqkO+ARvNWJfXeXR1zxz7aHF4u4CyH6vQ==
   /readdirp/3.2.0:
     dependencies:
-      picomatch: 2.1.1
+      picomatch: 2.2.1
     dev: false
     engines:
       node: '>= 8'
@@ -17086,6 +17093,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-vAIEf5CuLPNgH5obVP7WS1U+I91L+vSKLpradVn6AhbyFrccWlNQwFVuYktInafgkvA6z4w9rLkuRKBZ5izkSA==
+  /xstate/4.7.7:
+    dev: false
+    resolution:
+      integrity: sha512-ctV7gShkDe+HOLP1MV78FRqWhNtmMJvtGjlgP10N6MeELVxGbvc54WrwfBv0e/xyjSaqveM48Pohut71naqVNA==
   /xtend/4.0.2:
     engines:
       node: '>=0.4'
@@ -17276,7 +17287,7 @@ specifiers:
   gatsby-plugin-sass: ^2.1.24
   gatsby-plugin-sharp: ^2.3.5
   gatsby-plugin-tailwindcss: ^1.0.3
-  gatsby-source-filesystem: ^2.1.40
+  gatsby-source-filesystem: ^2.1.47
   gatsby-transformer-sharp: ^2.3.7
   node-sass: ^4.13.0
   postcss-import: ^12.0.1
