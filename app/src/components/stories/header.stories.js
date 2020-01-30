@@ -2,7 +2,7 @@ import React from "react";
 
 import Header from "../header";
 
-import bgSrc from "../../images/test-images/test-bg.jpg";
+import bgSrc from "../../../content/assets/storybook-test-images/test-bg.jpg";
 
 export default { title: "Header" };
 
