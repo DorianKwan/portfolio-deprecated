@@ -33,6 +33,14 @@ module.exports = {
         postCssPlugins: [tailwindcss("./tailwind.config.js")],
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/,
+        },
+      },
+    },
 
     /**
      * ---------------------------------------------------------------------------
