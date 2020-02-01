@@ -24,7 +24,7 @@ module.exports = {
         short_name: "BSK Portfolio",
         start_url: "/",
         display: "minimal-ui",
-        icon: "src/images/icons/brand-logo.svg",
+        icon: "src/assets/icons/brand-logo.inline.svg",
       },
     },
     {
@@ -37,7 +37,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /icons/,
+          include: /\.svg$/,
         },
       },
     },
