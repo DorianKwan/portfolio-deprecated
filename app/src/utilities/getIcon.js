@@ -1,8 +1,8 @@
-import BrandLogo from "../../content/assets/icons/brand-logo.svg";
-import LinkedIn from "../../content/assets/icons/linked-in.svg";
-import Github from "../../content/assets/icons/github.svg";
-import Envelope from "../../content/assets/icons/envelope.svg";
-import Document from "../../content/assets/icons/document.svg";
+import BrandLogo from "../assets/icons/brand-logo.inline.svg";
+import LinkedIn from "../assets/icons/linked-in.inline.svg";
+import Github from "../assets/icons/github.inline.svg";
+import Envelope from "../assets/icons/envelope.inline.svg";
+import Document from "../assets/icons/document.inline.svg";
 
 const getIconSRC = (icon) => {
   let iconSRC = "";
