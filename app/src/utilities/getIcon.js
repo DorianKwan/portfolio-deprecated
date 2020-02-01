@@ -4,31 +4,31 @@ import Github from "../assets/icons/github.inline.svg";
 import Envelope from "../assets/icons/envelope.inline.svg";
 import Document from "../assets/icons/document.inline.svg";
 
-const getIconSRC = (icon) => {
-  let iconSRC = "";
+const getIcon = (iconName) => {
+  let icon;
 
-  switch (icon) {
+  switch (iconName) {
   case "brand-logo":
-    iconSRC = BrandLogo;
+    icon = BrandLogo;
     break;
   case "linked-in":
-    iconSRC = LinkedIn;
+    icon = LinkedIn;
     break;
   case "github":
-    iconSRC = Github;
+    icon = Github;
     break;
   case "envelope":
-    iconSRC = Envelope;
+    icon = Envelope;
     break;
   case "document":
-    iconSRC = Document;
+    icon = Document;
     break;
   default:
     // TODO: Add 404 SVG
     break;
   }
 
-  return iconSRC;
+  return icon;
 };
 
-export default getIconSRC;
+export default getIcon;
