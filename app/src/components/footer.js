@@ -1,9 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
-import { ReactSVG } from "react-svg";
 
-import getIconSRC from "../utilities/getIconSRC";
+import getIcon from "../utilities/getIcon";
 
 import "./footer.scss";
 
@@ -13,13 +12,13 @@ const buildSocialLinks = (socialData) => {
   socialData.forEach((social) => {
     const { title, href, icon } = social;
     const helperText = `Open my ${title} in new tab`;
-    const iconSRC = getIconSRC(icon);
+    const SocialIcon = getIcon(icon);
 
     socialLinks.push(
       <li key={title} className="max-w-24">
         <a className="text-charcoal" href={href} target="_blank" rel="noopener noreferrer" title={helperText}>
           <span className="sr-only">{helperText}</span>
-          <ReactSVG src={iconSRC} />
+          <SocialIcon />
         </a>
       </li>
     );
@@ -47,19 +46,13 @@ const buildNavigationLinks = (navigationData) => {
 const Footer = ({ siteTitle, navigationData, socialData }) => {
   const navLinks = buildNavigationLinks(navigationData);
   const socialLinks = buildSocialLinks(socialData);
-  const brandLogoSRC = getIconSRC("brand-logo");
+  const BrandLogo = getIcon("brand-logo");
 
   return (
     <footer className="footer w-full md:h-300">
       <section className="stretch-bg py-16 h-3/4 bg-charcoal">
         <h1 className="text-off-white font-normal text-26 flex items-center">
-          <ReactSVG
-            src={brandLogoSRC}
-            className="flex items-center pr-10"
-            beforeInjection={(svg) => {
-              svg.setAttribute("style", "width: 30px; margin-bottom: -0.35rem");
-            }}
-          />
+          <BrandLogo className="w-30 mr-10" />
           {siteTitle}
         </h1>
         <nav>
