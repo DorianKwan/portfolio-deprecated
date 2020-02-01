@@ -27,6 +27,7 @@
     "react-helmet": "^5.2.1",
     "react-modal": "^3.11.1",
     "react-svg": "^11.0.7",
+    "svg-react-loader": "^0.4.6",
     "tailwindcss": "^1.1.4",
     "tailwindcss-transforms": "^2.2.0",
     "tailwindcss-transitions": "^2.1.0"

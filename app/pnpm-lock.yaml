@@ -21,6 +21,7 @@ dependencies:
   react-helmet: 5.2.1_react@16.12.0
   react-modal: 3.11.1_react-dom@16.12.0+react@16.12.0
   react-svg: 11.0.7_react-dom@16.12.0+react@16.12.0
+  svg-react-loader: 0.4.6
   tailwindcss: 1.1.4
   tailwindcss-transforms: 2.2.0
   tailwindcss-transitions: 2.1.0
@@ -17381,6 +17382,7 @@ specifiers:
   react-svg: ^11.0.7
   sass-loader: ^8.0.2
   style-loader: ^1.1.3
+  svg-react-loader: ^0.4.6
   tailwindcss: ^1.1.4
   tailwindcss-transforms: ^2.2.0
   tailwindcss-transitions: ^2.1.0
