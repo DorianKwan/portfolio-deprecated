@@ -38,6 +38,7 @@ const colors = {
   ash: "#544C4A",
   charcoal: "#222021",
   // Brand Colors
+  pink: "#E8A8C7",
   hunter: "#3F704D", // light forest green
   tea: "#D0F0C0", // light pale green
   army: "#4B5320", // brown green almost grey
