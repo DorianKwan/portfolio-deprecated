@@ -10,7 +10,7 @@
 ### Additional information
 
 - Statically generated site using [GatsbyJS](https://www.gatsbyjs.org/docs/)
-  - Based on Based on gatsby-starter-default
+  - Based on gatsby-starter-default
 - [Tailwind CSS](https://tailwindcss.com/) Framework & [Sass](https://sass-lang.com/documentation)
 - [PurgeCSS](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) to remove unused CSS
 - [StorybookJS](https://storybook.js.org/docs/basics/introduction/) for easy UI testing
