@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Modal from "react-modal";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
-import { ReactSVG } from "react-svg";
 import { Link } from "gatsby";
 
-import "./header.scss";
+import getIcon from "../utilities/getIcon";
 
-import brandLogoSRC from "../images/icons/brand-logo.svg";
+import "./header.scss";
 
 const modalStyles = {
   content: {
@@ -35,16 +34,12 @@ const buildNavlinks = (navigationData, linkWrapperClasses, linkClasses) => {
 };
 
 const buildSiteLogo = (siteTitle) => {
+  const BrandLogo = getIcon("brand-logo");
+
   return (
     <Link to="/" className="text-inherit flex flex-row items-center">
       <span className="sr-only">Go to home:</span>
-      <ReactSVG
-        src={brandLogoSRC}
-        className="flex items-center mt-4 pr-10"
-        beforeInjection={(svg) => {
-          svg.setAttribute("style", "width: 34px;");
-        }}
-      />
+      <BrandLogo className="h-32 mr-10" />
       <h1 className="font-normal">{siteTitle}</h1>
     </Link>
   );
