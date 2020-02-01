@@ -137,7 +137,7 @@ const Header = ({ siteTitle, navigationData }) => {
 
   return (
     <header
-      className="navbar w-full max-w-1600 h-80 flex flex-row justify-between items-center fixed -top-1"
+      className="navbar w-full max-w-1600 h-80 flex flex-row justify-between items-center fixed -top-1 z-1"
       style={{ ...headerStyle }}
     >
       {siteLogo}
